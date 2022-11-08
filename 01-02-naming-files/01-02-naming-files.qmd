@@ -1,0 +1,288 @@
+---
+title: "Lecture 1.2: Naming Things"
+subtitle: "Week 1 - Data Science Workflows"
+author: Dr Zak Varty
+date: ""
+editor: source
+format:
+  revealjs:
+    theme: ../eds-slides-theme.scss #(default / dark / simple)
+    logo: assets/EDS-logo.jpg
+    bibliography: ../refs.bib
+    footer: "Effective Data Science: Workflows - Naming Things - Zak Varty"
+    menu: true
+    slide-number: true
+    show-slide-number: all # (all / print / speaker)
+    self-contained: false # (set to true before publishing html to web)
+    chalkboard: true # (conflicts with self-contained)
+      #src: drawings.json
+      #theme: whiteboard
+      #read-only: true
+      #buttons: false
+    width: 1600 # default is 1050
+    height: 900 # default is 850
+    incremental: false
+---
+
+## Naming things is easy, Naming things _well_ is hard 
+
+<br> 
+
+> "There are only two hard things in Computer Science: cache invalidation and naming things."
+>
+> **Phil Karlton, Netscape Developer**
+
+:::{.notes}
+When working on a data science project we can in principle name directories, files, functions and other objects whatever we like. In reality though, using an ad-hoc system of naming is likely to cause confusion, headaches and mistakes. We obviously want to avoid all of those things, in the spirit of being kind to our current colleges and also to our future selves. 
+
+Coming up with good names is an art form. Like most art, naming things is an activity that you get better at with practice. Another similarity is that the best naming systems don't come from giving data scientists free reign over their naming system. Like all art, the best approaches to naming things give you strong guidelines and boundaries within which to express your creativity and skill. 
+
+In this lecture we'll explore what these boundaries and what we want them to achieve for us. The content of this lecture is based largely around a talk of the same name given by Jennifer Bryan and the tidyverse style guide, which forms the basis of Google's style guide for R programming.  
+:::
+
+<!-- ======================================================================= -->
+# Part 1: Naming Files 
+<!-- ======================================================================= -->
+
+----------
+
+## What do we want from file names? 
+
+::::{.columns}
+
+:::{.column width="40%"} 
+
+<br>
+
+ 1. Machine Readable
+
+<br>
+
+ 2. Human Readable
+ 
+<br>
+
+ 3. Order Friendly
+ 
+:::
+
+:::{.column width="60%"}
+
+**Current names:** <br>
+
+```
+abstract.docx
+Effective Data Science's module guide 2022.docx 
+fig 12.png
+Rplot7.png
+1711.05189.pdf
+HR Protocols 2015 FINAL (Nov 2015).pdf
+```
+<br>
+
+**Better names:** <br>
+
+```
+2015-10-22_human-resources-protocols.pdf
+2022_effective-data-science-module-guide.docx
+2022_RSS-conference-abstract.docx 
+fig12_earthquake-timeseries.png 
+fig07_earthquake-location-map.png
+ogata_1984_spacetime-clustering.pdf
+```
+:::
+
+::::
+
+----------
+
+## Machine Readable 
+
+What do we mean by machine readable filenames? 
+
+- Easy to compute on by _deliberate use of delimiters_:
+  - `underscores_separate_metadata`,  `hyphens-separate-words`.
+
+<br>
+
+- Play nicely with _regular expressions_ and _globbing_: 
+  - avoid spaces, punctuation, accents, cases;
+  - `rm Rplot*.png`
+  
+----------
+
+## Machine Readable
+
+Machine readable names are useful when: 
+
+- *managing files*: ordering, finding, moving, deleting: 
+
+<br>
+
+- *extracting information* directly from file names,
+
+<br>
+
+- *working programmatically* with filenames and regex.
+
+## Order Friendly 
+
+Start  with a number if there is a logical order to your files (e.g steps in an analysis).
+
+::::{.columns}
+:::{.column width="45%"}
+
+**Original**
+
+:::{.smaller}
+> `diagnositc-plots.R`
+>
+> `download.R`
+>
+> `runtime-comparison.R`
+>
+> `...` 
+> 
+> `model-evaluation.R`
+>
+> `wrangle.R`
+:::
+
+:::
+
+:::{.column width="55%"}
+**Refined**
+
+:::{.smaller}
+
+> `00_download.R`
+>
+> `01_wrangle.R`
+>
+> `02_model.R`
+>
+> `...` 
+> 
+> `09_model-evaluation.R`
+>
+> `10_model-comparison-plots.R`
+
+:::
+
+:::
+
+::::
+
+----------
+
+## Order Friendly 
+
+Start with a date for chronologically ordered files (e.g. data, versions, regular reports) 
+
+> `2015-10-22_human-resources-protocols.pdf`
+>
+> `2022-effective-data-science-module-guide.docx`
+
+
+
+The ISO 8601 standard for dates was created for a reason. Use it.
+
+. . . 
+
+<h2 class="r-fit-text">YYYY-MM-DD</h2>
+
+
+----------
+
+## Human Readable 
+
+File names should be meaningful, informative and 
+
+```
+easilyreadbyrealpeople
+
+EasilyReadByRealPeople 
+
+easily-read-by-real-people.
+```
+
+<br>
+
+Bad news for `untitled31.R`, `finalreportV8.docx` and `temp.txt`.
+
+<br>
+
+Look into slugs (web URLs, not the animals) for further tips.
+
+
+
+## Naming Files - Style Guide Summary
+
+1. File names should be meaningful, informative and scripts end in `.R` 
+
+2. Stick to letters, numbers underscores (` _ `) and hypens (` - `).
+
+3. Pay attention to capitalisation `file.R` $\neq$ `File.R` on all operating systems.
+
+4. Show order with left-padded numbers or ISO dates.
+
+. . . 
+
+::::{.columns}
+:::{.column width="47%"}
+
+*Original:*
+
+```
+abstract.docx
+Effective Data Science's module guide 2022.docx 
+fig 12.png
+Rplot7.png
+1711.05189.pdf
+HR Protocols 2015 FINAL (Nov 2015).pdf
+```
+
+:::
+:::{.column width="53%"}
+
+*Refined:* 
+
+```
+2015-10-22_human-resources-protocols.pdf
+2022_effective-data-science-module-guide.docx
+2022_RSS-conference-abstract.docx 
+fig12_earthquake-timeseries.png 
+fig07_earthquake-location-map.png
+ogata_1984_spacetime-clustering.pdf
+```
+
+:::
+::::
+
+# Part 2: File Extensions and Where You Work 
+
+----------
+
+## What comes after the dot?
+
+So far we have focused entirely on what comes before the dot, the file name.
+
+Equally, if not more, important is what comes after the dot, the file extension.
+
+<br>
+
+`2022-10-31_earthquake-data.csv`
+
+`01-download.R`
+
+`2022_annual_report.docx`
+
+<br>
+
+The file extension describes how information is stored in that file and determines what software can be used view or run it. 
+
+<!-- This can have huge rammifications for the portability, reproducibility, version control and IDE compatibility of your work. -->
+
+
+
+
