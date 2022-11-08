@@ -53,3 +53,8 @@ mean <- function(x) sum(x)
 
   ## References {visibility="uncounted"}
 
+```{r}
+#temp <- xml2::read_xml("images/example.xml")
+#temp
+#test <- xml2::as_list(temp)
+```
