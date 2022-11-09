@@ -13,8 +13,8 @@ format:
     menu: true
     slide-number: true
     show-slide-number: all # (all / print / speaker)
-    self-contained: false # (set to true before publishing html to web)
-    chalkboard: true # (conflicts with self-contained)
+    self-contained: true # (set to true before publishing html to web)
+    chalkboard: false # (conflicts with self-contained)
       #src: drawings.json
       #theme: whiteboard
       #read-only: true
@@ -334,7 +334,7 @@ What do we mean by a new location, exactly?
 
 
 
-### Summary 
+## Summary 
 
 <br> 
 
