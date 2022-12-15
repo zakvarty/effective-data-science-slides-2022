@@ -1,6 +1,6 @@
 ---
-title: "Lecture 1.1: Organising Your Work"
-subtitle: "Week 1 - Data Science Workflows"
+title: "Organising Your Work"
+subtitle: "Data Science Workflows"
 author: Dr Zak Varty
 date: ""
 editor: source
