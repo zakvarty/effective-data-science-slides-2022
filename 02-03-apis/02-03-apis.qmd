@@ -163,11 +163,11 @@ This request-response model is the basis for HTTP, the same communication model 
 
 ## HTTP Requests 
 
-An HTML request consists of: 
+An HTTP request consists of: 
 
 ::::{.columns}
 :::{.column width="40%"}
-![](images/html-request.png)
+![](images/http-request.png)
 :::
 :::{.column width="5%"}
 :::
@@ -182,7 +182,7 @@ An HTML request consists of:
 ::::
 
 :::{.notes}
-Let's look in a little more detail at the structure of an HTML request. It has four main parts:
+Let's look in a little more detail at the structure of an HTTP request. It has four main parts:
 
 A URL or Uniform resource locator is unique identifier for a thing on the internet. Colloquailly this is known as a web address and they can point toward any type of object: a webpage but it can also point to a file, like an image or document, or else to an application or other form of software. In this case the URL will be used for database access.
 
@@ -195,7 +195,7 @@ Finally, the body of the request contains any data that the client wants to send
 
 ## HTTP Methods
 
-The most common HTML Methods are: 
+The most common HTTP Methods are: 
 
 - `GET`
 - `POST`
@@ -217,7 +217,7 @@ In addition to these common HTTP verbs, there are also several less frequently u
 
 ::::{.columns}
 :::{.column width="45%"}
-![](images/html-response.png)
+![](images/http-response.png)
 :::
 :::{.column width="5%"}
 :::
@@ -326,7 +326,7 @@ We've learned a lot about how computers communicate - how do we put this into pr
 :::{.notes}
 We've learned a lot about how the internet works. Fortunately, a lot of the time we won't have to worry about all of that new information other than for debugging purposes. 
 
-In the best case scenario, a very kind developer has written a "wrapper" function for the API. These wrappers are functions in R that will construct the HTML request for you. If you are particularly lucky, the API wrapper will also format the response for you, converting it from XML or JSON back into an R object that is ready for immediate use.  
+In the best case scenario, a very kind developer has written a "wrapper" function for the API. These wrappers are functions in R that will construct the HTTP request for you. If you are particularly lucky, the API wrapper will also format the response for you, converting it from XML or JSON back into an R object that is ready for immediate use.  
 
 One place that you might find some interesting API wrappers is [rOpenSci](https://ropensci.org/). This is a website that has a curated list of many wrappers for accessing scientific data using R.
 :::
