@@ -31,7 +31,7 @@ format:
 ::::{.columns}
 :::{.column width="60%"}
 
-Visualisation is a key skill in your data science toolkit:
+Visualisation is a key skill in your data science tool kit:
 
 - Rapidly explore data sets 
 
@@ -41,7 +41,7 @@ Visualisation is a key skill in your data science toolkit:
 
 - Telling compelling stories. 
 
-Reflective excercise, not a tutorial or rulebook.
+_Reflective exercise, not a tutorial or rulebook._
 :::
 :::{.column width="5%"}
 :::
@@ -57,13 +57,13 @@ You'll use visualisations to rapidly explore new data sets, to understand their 
 
 When well designed, plots, tables and animations can tell compelling stories that were once trapped within your data. They can also intuitively communicate the strength of evidence for your findings and draw attention to the most salient parts your argument. 
 
-Data visualisation is an amalgamation of science, statistics, graphic design and storytelling. It's multi-disciplinary nature means that we have to draw on all of our skills to ensure suceess. 
+Data visualisation is an amalgamation of science, statistics, graphic design and storytelling. It's multi-disciplinary nature means that we have to draw on all of our skills to ensure success. 
 
-While there are certainly many ways to go wrong when visualising data, there are many more ways to get it right. This video won't be a a step-by-step tutorial of how to visualise any type of data - that is simply not possible. Nor will it be a line-up of visualisations gone wrong. Instead, I hope to pose some questions that'll get you thinking critically about exatly what you want from each graphic that you produce.
+While there are certainly many ways to go wrong when visualising data, there are many more ways to get it right. This video won't be a a step-by-step tutorial of how to visualise any type of data - that is simply not possible. Nor will it be a line-up of visualisations gone wrong. Instead, I hope to pose some questions that'll get you thinking critically about exactly what you want from each graphic that you produce.
 :::
 
 <!-- ----------------------------------------------------------------------- -->
-# 1: Think About Your Tools 
+# 1: Think About Your Tools {{< fa hammer >}}
 <!-- ----------------------------------------------------------------------- -->
 
 ## Data visualisation tools {.smaller}
@@ -73,60 +73,311 @@ While there are certainly many ways to go wrong when visualising data, there are
 :::{.notes}
 :::
 
-## Selecting your tools 
+## Selecting your tools {.smaller}
 
-![]
+![Caffeination vs sleep, shown in lego. Elsie Lee-Robbins](images/lego-coffee.jpg) 
+
 
 :::{.notes}
+Example visualisation tools: 
+
+__Physical__ 
+- pen and paper
+- physical objects like loge
+- connect-four donation counters in big transparent containers
+
+__Digital__
+- Drawing tools like Photoshop or inkscape
+- More data focused, point and click tools like excel's graph creator or tableau. Good for visualising larger quantities of data that you wouldn't want to do by hand. Not reproducible without extensive documentation explaining how a graphic was created. 
+- Scripting based approaches: write code to make your plots. Many approaches to this, even within a single programming language. 
+- Benefit of working programmatically is that visualisation becomes a part of your reproducible workflow, the scales easily to large data sets and easy to alter if any changes are required. 
+- Downside is that there is a relatively steep learning curve, that point-and-click methods avoid. 
+
+No matter how you produce your visualisations, the time-cost to develop your skills in that medium buys you the ability to achieve greater levels of control and customisation. This upfront time investment will also make you faster at producing future graphics in that medium.  
+
+Whenever you approach a new visualisation problem, you should pick your tools and medium judiciously. You have to balance your immediate need for speed, accuracy and reproducibility against your current skill level and improving those skills in the medium to long term.
 :::
 
 ## Staying in the tidyverse: `{ggplot2}`
 
+::::{.columns}
+:::{.column width="40%"}
+
+<br>
+
+Layered creation of graphics from tidy data. 
+ 
+Learning `{ggplot2}`:
+
+- [Resources](https://ggplot2.tidyverse.org/#learning-ggplot2)
+- [Tutorial](https://www.cedricscherer.com/2019/08/05/a-ggplot2-tutorial-for-beautiful-plotting-in-r/) 
+- [Tidy Tuesday Github](https://github.com/search?p=1&q=tidy+tuesday&type=Repositories)
+  
+:::
+:::{.column width="60%"}
+
+<br>
+
+![](images/grammar-of-graphics-abstract.png)
+:::
+::::
+
+:::{.notes}
+ggplot2 is a popular R package for producing high quality data visualisations. 
+
+Focused on building up graphics programmatically, layer by layer. Based around a "grammar of Graphics" introduced by Leland Wilkinson and popularised by Hadley Wickham.
+
+To learn how to create  
+
+:::
+
 <!-- ----------------------------------------------------------------------- -->
-# 2: Think About Your Medium
+# 2: Think About Your Medium {{< fa person-chalkboard >}}
 <!-- ----------------------------------------------------------------------- -->
 :::{.notes}
 :::
 
 ## Where will your plot go?  
 
+::::{.columns}
+:::{.column width="50%"}
+<br>
+
+_Use cases:_ exploratory analysis, presentation, report / paper, data journalism.
+
+<br>
+_Considerations:_ 
+
+- Time investment vs quality
+- Image size / format
+- Time spent with graphic
+:::
+:::{.column width="50%"}
+![](images/visualisation-purposes.png)
+:::
+::::
 
 :::{.notes}
 :::
 
 ## File types
 
+::::{.columns}
+:::{.column width="50%"}
+
+<br>
+
+_Bitmap Graphics:_ png, jpeg, gif
+
+  - made of pixels
+  - smaller file size
+  
+_Vector Graphics:_ pdf, eps, svg
+
+  - made of vectors
+  - larger file size
+
+:::
+:::{.column width="50%"}
+![](images/dalle-pixellated-image.png)
+:::
+::::
+
+:::{.notes}
+::: 
+
+<!-- ----------------------------------------------------------------------- -->
+# 3: Think About Your Audience {{< fa people-group >}}
+<!-- ----------------------------------------------------------------------- -->
+:::{.notes}
+:::
+
+##  Know your audience
+
+::::{.columns}
+:::{.column width="50%"}
+![](images/user-groups.png)
+:::
+:::{.column width="50%"}
+Who is the intended audience for your visualisation? 
+
+What knowledge do they bring with them? 
+
+What assumptions and biases do they hold?
+
+<br>
+
+Creating _personas_ for distinct user groups can be helpful.
+:::
+::::
+
+:::{.notes}
+:::
+
+## Preattentive Attributes {.smaller}
+
+```{r fig.align='center'}
+knitr::include_graphics("images/preattentive-attributes.png")
+```
+<!--<img src="images/pre-attentive-attributes.png" height="10%">-->
+<!--![](images/pre-attentive-attributes.png)-->
+:::{.notes}
+:::
+
+## First impressions count {.smaller}
+
+
+![Issues with scales, area and perspective](images/average-male-height.jpg)
+
+
+:::{.notes}
+:::
+
+## Visual perception {.smaller}
+
+::::{.columns}
+:::{.column width="50%"}
+<br>
+![Default colour scales](images/saturated-colour-scales.png)
+:::
+:::{.column width="50%"}
+<br>
+![Desaturated colour scales](images/desaturated-colour-scales.png)
+:::
+::::
+
+:::{.notes}
+:::
+
+## Alt text, titles and captions
+
+:::{.callout-note icon=false}
+### Captions
+Describes a figure or table so that it may be identified in a list of figures and (where appropriate).
+:::
+
+:::{.callout-note icon=false}
+### Alternative text
+Describes the content of an image for a person who cannot view it. ([Guide to writing alt-text](https://myaccessible.website/infographic/images/images-accessibility-alt-text ))
+:::
+
+:::{.callout-note icon=false}
+### Titles
+Give additional context or identify key findings. Active titles are preferable.
+
+<s>Graph to show how X varies with Y</s> 
+:::
+
+
+:::{.notes}
+__Captions__ 
+Captions are short descriptions of a visualisation, usually displayed directly above or below the figure or table that it describes. Captions serve two purposes: in a report, the caption can be used to look up the visualisation from a list of figures or tables. The second purpose of a caption is to add additional detail that you don't want to add to the plot directly. For example "Time series of GDP in the United States of America, 2017-2022. Lines show daily (solid), monthly (dashed) and five-year (dotted) mean values."
+
+__Alt-text__ 
+Alt text or alternative text is used to describe the content of an image to a person who can't view it. This text is helpful for people with a visual impairment, particularly those who uses a screen reader. Screen reading software reads digital text out loud but can't interpret images. Such software replaces the image with the provided alternative text. Alt text is also valuable in cases when the image can't be found or loaded, for example because of an incorrect file path or a slow internet connection.
+
+The purpose of alt-text is different from a caption. It's designed as a replacement for the image, not just a shorthand or to provide additional information. If there is an important trend or conclusion to be drawn from the visualisation (that is not already mentioned in the main text) this should be identified in the alt-text. This sort of interpretation is a key aspect of alt-text that shouldn't be included in a caption. 
+
+__Titles__ 
+Titles give additional context that is not conveyed by the axis labels or chart annotations. Alternatively the title can be used like a newspaper headline to deliver the key findings of the visualisation. One example of this might be when looking at a visualisation that is composed of many smaller plots, each showing the GDP for a US state over the last five years. Title for each smaller plot would identify the state it is describing, while the overall title might be something like "All US states have increased GDP in the period 2017-2022".
+
+If you are including this type of interpretive title, make sure that the same interpretation is clear in the alt-text.  
+:::
+
+<!-- ----------------------------------------------------------------------- -->
+# 4: Think About Your Story {{< fa book-open >}}
+<!-- ----------------------------------------------------------------------- -->
+:::{.notes}
+:::
+
+## Data visualisation as storytelling 
+
+::::{.columns}
+:::{.column width="50%"}
+![](images/entertain-persuade-inform.png)
+:::
+:::{.column width="50%"}
+<br>
+
+- Where does your purpose fall on this triangle? 
+
+<br>
+
+- No such thing as neutral presentation. 
+
+<br>
+
+- Start with a hook.
+:::
+::::
 :::{.notes}
 :::
 
 <!-- ----------------------------------------------------------------------- -->
-# 3: Think About Your Audience
-<!-- ----------------------------------------------------------------------- -->
-
-##  Who are your audience?
-
-## Preattentive Attributes
-
-## First impressions count 
-
-## Visual perception 
-
-## Alt text, titles and captions
-
-<!-- ----------------------------------------------------------------------- -->
-# 4: Think About Your Story
-<!-- ----------------------------------------------------------------------- -->
-
-## Data visualisation as storytelling 
-
-<!-- ----------------------------------------------------------------------- -->
-# 5: Think About Your Guidelines
+# 5: Think About Your Guidelines {{< fa pen-to-square >}}
 <!-- ----------------------------------------------------------------------- -->
 
 ## Standardise and document it 
 
+<br>
+
+Decisions cost time, energy and money. (DRY)
+
+<br>
+
+Consider your design choices carefully and write down your decisions and reasoning. (DRY)
+
+<br>
+
+This will form the basis of your own _style-guide for data visualisation_. 
+
+:::{.notes}
+:::
+
+## Style guides for data visualisation 
+
+::::{.columns}
+:::{.column width="50%"}
+
+<br>
+
+- BBC 
+  - [Infographics Guidelines](https://www.bbc.co.uk/gel/features/how-to-design-infographics )
+  - [R Cookbook](https://bbc.github.io/rcookbook/)
+  - [`{bbplot}`](https://github.com/bbc/bbplot)
+  
+- [The Economist](https://design-system.economist.com/documents/CHARTstyleguide_20170505.pdf) 
+:::
+:::{.column width="50%"}
+
+<br>
+
+- [The Office for National Statistics](https://style.ons.gov.uk/category/data-visualisation/)
+
+- [Eurostat](https://ec.europa.eu/eurostat/web/products-eurostat-news/-/STYLE-GUIDE_2016)
+
+- [Urban Institute](https://urbaninstitute.github.io/graphics-styleguide/)
+
+- [The Pudding](https://pudding.cool/resources/) (learning resources)
+:::
+::::
+
+:::{.notes}
+:::
 
 ## Wrapping Up 
+
+<br>
+
+{{< fa hammer >}} Think about your _tools_
+
+{{< fa person-chalkboard >}} Think about your _medium_
+
+{{< fa people-group >}} Think about your _audience_
+
+{{< fa book-open >}} Think about your _story_
+
+{{< fa pen-to-square >}} Think about your _guidelines_
 
 :::{.notes}
 Wrapping up then. 
@@ -139,8 +390,14 @@ Thank you very much for your attention, and I'll see you in the next video.
 
 * Coffee Cup -  [Jaime Serra Palou](https://www.domestika.org/pt/projects/417262-cafe-diario)
 
+* Lego coffee - [Elsie Lee-Robbins](https://mobile.twitter.com/elsieleerobbins/status/1603486802144288771) via Twitter
+
+<!--(alt text:  A data visualization/physicalization of a scatter plot made out of colourful legos. The y axis is "How much sleep did you get last night?" and the x axis is "How caffeinated are you?" There doesn't seem to be a correlation, points are all over the scatter plot, but the biggest stack is in the bottom left hand corner of "not enough sleep" and "no caffeine")-->
+
 * Pre-attentive attributes - Adapted from [Better Data Visualizations](http://cup.columbia.edu/book/better-data-visualizations/9780231193115)
 
-* Female Heights - [tumblr/badvisualisations via twitter](https://www.tumblr.com/badvisualisations/184828044636/1-as-a-rule-the-y-axis-of-a-bar-graph-needs-to) 
+<!--* Female Heights - [tumblr/badvisualisations via twitter](https://www.tumblr.com/badvisualisations/184828044636/1-as-a-rule-the-y-axis-of-a-bar-graph-needs-to) -->
+
+* Male Heights - [patient.info](https://patient.info/news-and-features/whats-the-average-height-for-men)
 
 * Desaturated colour scales - `{viridis}` [documentation](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html)
