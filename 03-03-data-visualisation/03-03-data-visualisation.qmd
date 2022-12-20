@@ -55,25 +55,33 @@ Data visualisation is an integral part of your work as a data scientist.
 
 You'll use visualisations to rapidly explore new data sets, to understand their structure and to establish which types of model might be suitable for the task at hand. Visualisation is also vital during model evaluation and when check the validity of the assumptions on which that model is based. These are relatively technical uses of visualisation, but graphics have a much broader role within your work of an effective data scientist. 
 
-When well designed, plots, tables and animations can tell compelling stories that were once trapped within your data. They can also intuitively communicate the strength of evidence for your findings and draw attention to the most salient parts your argument. 
+When well designed, plots, tables and animations can tell compelling stories that were once trapped within your data. They can also intuitively communicate the strength of evidence for your findings and draw attention to the most salient parts your argument.
 
-Data visualisation is an amalgamation of science, statistics, graphic design and storytelling. It's multi-disciplinary nature means that we have to draw on all of our skills to ensure success. 
+Data visualisation is an amalgamation of science, statistics, graphic design and storytelling. It's multi-disciplinary nature means that we have to draw on all of our skills to ensure success. While there are certainly many ways to go wrong when visualising data, there are many more ways to get it right. 
 
-While there are certainly many ways to go wrong when visualising data, there are many more ways to get it right. This video won't be a a step-by-step tutorial of how to visualise any type of data - that is simply not possible. Nor will it be a line-up of visualisations gone wrong. Instead, I hope to pose some questions that'll get you thinking critically about exactly what you want from each graphic that you produce.
+This video won't be a a step-by-step tutorial of how to visualise any type of data - that is simply not possible. Nor will it be a line-up of visualisations gone wrong. Instead, I hope to pose some questions that'll get you thinking critically about exactly what you want from each graphic that you produce.
 :::
 
 <!-- ----------------------------------------------------------------------- -->
 # 1: Think About Your Tools {{< fa hammer >}}
 <!-- ----------------------------------------------------------------------- -->
+:::{.notes}
+There are five things that you should think about when producing any sort of data visualistion. We will consider each of these in turn, starting with the tools that you use to produce the visualisation.
+:::
 
 ## Data visualisation tools {.smaller}
 
 ![Coffee consumption, visualised. Jaime Serra Palou.](images/coffee-2.png)
 
 :::{.notes}
+When you think of data visualisation, you might immediately think of impressive animations or complex, interactive dashboards that allow users to explore relationships within the data for themselves. 
+
+Such tools are no doubt impressive but they are by no means necessary for an effective data visualisation. In many cases there is no technology is needed at all. The history of data visualisation vastly pre-dates that of computers and some of the most effective visualisations remain analogue creations. 
+
+This visualisation of a year's coffee consumption is an ideal example. Displaying the number of cups of coffee in a bar chart or line graph would have been a more accurate way to collect and display this data, but that wouldn't have the same resonance or impact and it certainly wouldn't have been as memorable. 
 :::
 
-## Selecting your tools {.smaller}
+## Selecting your tools: Analogue or Digital {.smaller}
 
 ![Caffeination vs sleep, shown in lego. Elsie Lee-Robbins](images/lego-coffee.jpg) 
 
@@ -86,16 +94,24 @@ __Physical__
 - physical objects like loge
 - connect-four donation counters in big transparent containers
 
+Here we have another example of an analogue data visualisation that is created as part of data collection. Each member of the department is invited to place a Lego brick on a grid to indicate how much caffeine they have consumed and how much sleep they have had. The beauty of using Lego bricks here is that they are stackable and so create a bar plot over two dimensions. 
+
+A third example can be found next to the tills in many supermarkets. Each customer is given a token as they pay for their goods. They can then drop this token into one of three large perspex containers as they leave the shop, each representing a different charity. At the end of the month £10,000 is split between the charities in proportion to the number of tokens. Because the containers are made from a transparent material you can see how the tokens are distributed, giving a visualisation of the level of support for each of the charities.
+
+There are many other way of constructing a physical, analogue visualisation of your data and this doesn't need to be done as part of the data collection process. The simplest and Perhaps most obvious most obvious is to create a plot of tabular data using a pen and paper. 
+
 __Digital__
-- Drawing tools like Photoshop or inkscape
-- More data focused, point and click tools like excel's graph creator or tableau. Good for visualising larger quantities of data that you wouldn't want to do by hand. Not reproducible without extensive documentation explaining how a graphic was created. 
-- Scripting based approaches: write code to make your plots. Many approaches to this, even within a single programming language. 
-- Benefit of working programmatically is that visualisation becomes a part of your reproducible workflow, the scales easily to large data sets and easy to alter if any changes are required. 
-- Downside is that there is a relatively steep learning curve, that point-and-click methods avoid. 
+When it comes to digital tools for data visualisation you have a plethora of options. The most similar to pen-and-paper plotting is to draw your visualisations using a Photoshop, or an open source equivalent like Inkscape. The benefit here is that if you mispace a line or dot you can correct this small error without having to start all over again. 
 
-No matter how you produce your visualisations, the time-cost to develop your skills in that medium buys you the ability to achieve greater levels of control and customisation. This upfront time investment will also make you faster at producing future graphics in that medium.  
+There are then more data-focused tools that have point-and-click interfaces. These are things like Excel's chart tools, or specialist visualisation software like Tableau. These are great because they scale with the quantity of data, so that you can plot larger amounts of raw data values that you wouldn't have the time or patience to do by hand - whether that's in an analogue or digital format. 
 
-Whenever you approach a new visualisation problem, you should pick your tools and medium judiciously. You have to balance your immediate need for speed, accuracy and reproducibility against your current skill level and improving those skills in the medium to long term.
+Analogue and point-and-click approaches to visualisation have the shared limitation of not being reproducible, at least not without extensive documentation explaining how the graphic was created. 
+
+Using code to create your visualisations can resolve this reproducibility issue, and includes visualisation as a part of your larger, reproducible workflow for data science. Scripted visualisations also scale easily to large data sets and are easy to alter if any changes are required. The downside here is that there is a relatively steep learning curve to creating such visualisations, which is exactly what point-and-click methods are trying to avoid.
+
+No matter how you produce your visualisations, the time cost of developing your skills in that medium is what buys you the ability to control and customise what you create. This upfront time investment will also often make you faster at producing future graphics in that medium.  
+
+Whenever you approach a new visualisation problem, you should pick your tools and medium judiciously. You have to balance your immediate needs for speed, accuracy and reproducibility against your current skill level and improving those skills in the medium to long term. Unfortunately, the only way to make good visualisations is to make lots of bad ones and even more mediocre ones first.  
 :::
 
 ## Staying in the tidyverse: `{ggplot2}`
@@ -123,12 +139,13 @@ Learning `{ggplot2}`:
 ::::
 
 :::{.notes}
-ggplot2 is a popular R package for producing high quality data visualisations. 
+If your aim is to produce a wide range of high quality data visualisation using R, then the {ggplot2} package is one of the most versatile and well documented tools available to you. 
 
-Focused on building up graphics programmatically, layer by layer. Based around a "grammar of Graphics" introduced by Leland Wilkinson and popularised by Hadley Wickham.
+The g's at the start of the package name stand for grammar of graphics. This is an opinionated, abstract approach to constructing data visualisations programmatically, by building them up slowly and adding additional plot elements one layer at a time. 
 
-To learn how to create  
+This idea of a  "grammar of Graphics" was originally introduced by Leland Wilkinson. The paper shown by Hadley Wickham, and the associated `{ggplot2}` package popularised this approach within the R community. Like many of the tidyverse collection of packages, `{ggplot2}` provides simple but specialised modular functions that can be composed to create complex visualisations.  
 
+If you'd like to learn how to use `{ggplot2}`, I wouldn't recommend starting with the paper nor would I recommend trying to get started with the docs alone. Instead, I would suggest you work through an introductory tutorial, or one of the resources linked within the package documentation. Once you have a grasp of the basic principles the best way to improve is to try making your own plots, using reference texts and other people's work as a guide. A great source of inspiration here is the TidyTuesday data visualisation challenge. You can search for the challenge on Github to inspect both the plots made by other people and the code that was used to make them. 
 :::
 
 <!-- ----------------------------------------------------------------------- -->
