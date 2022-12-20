@@ -1,0 +1,146 @@
+---
+title: "Effective Data Visualisation"
+subtitle: "Data Exploration and Visualisation"
+author: Dr Zak Varty
+date: ""
+editor: source
+format:
+  revealjs:
+    theme: ../eds-slides-theme.scss #(default / dark / simple)
+    logo: assets/EDS-logo.jpg
+    bibliography: ../refs.bib
+    footer: "Effective Data Science: EDAV - Visualisation - Zak Varty"
+    menu: true
+    slide-number: true
+    show-slide-number: all # (all / print / speaker)
+    self-contained: true # (set to true before publishing html to web)
+    chalkboard: false # (conflicts with self-contained)
+      #src: drawings.json
+      #theme: whiteboard
+      #read-only: true
+      #buttons: false
+    width: 1600 # default is 1050
+    height: 900 # default is 850
+    incremental: false
+---
+
+## More Than A Pretty Picture
+
+<br>
+
+::::{.columns}
+:::{.column width="60%"}
+
+Visualisation is a key skill in your data science toolkit:
+
+- Rapidly explore data sets 
+
+- Model evaluation and diagnostics 
+
+- Sharing evidence 
+
+- Telling compelling stories. 
+
+Reflective excercise, not a tutorial or rulebook.
+:::
+:::{.column width="5%"}
+:::
+:::{.column width="35%"}
+![Warming stripes graphic on the cover of "The Climate Book"](images/the-climate-book-jacket.jpg)
+:::
+::::
+
+:::{.notes}
+Data visualisation is an integral part of your work as a data scientist. 
+
+You'll use visualisations to rapidly explore new data sets, to understand their structure and to establish which types of model might be suitable for the task at hand. Visualisation is also vital during model evaluation and when check the validity of the assumptions on which that model is based. These are relatively technical uses of visualisation, but graphics have a much broader role within your work of an effective data scientist. 
+
+When well designed, plots, tables and animations can tell compelling stories that were once trapped within your data. They can also intuitively communicate the strength of evidence for your findings and draw attention to the most salient parts your argument. 
+
+Data visualisation is an amalgamation of science, statistics, graphic design and storytelling. It's multi-disciplinary nature means that we have to draw on all of our skills to ensure suceess. 
+
+While there are certainly many ways to go wrong when visualising data, there are many more ways to get it right. This video won't be a a step-by-step tutorial of how to visualise any type of data - that is simply not possible. Nor will it be a line-up of visualisations gone wrong. Instead, I hope to pose some questions that'll get you thinking critically about exatly what you want from each graphic that you produce.
+:::
+
+<!-- ----------------------------------------------------------------------- -->
+# 1: Think About Your Tools 
+<!-- ----------------------------------------------------------------------- -->
+
+## Data visualisation tools {.smaller}
+
+![Coffee consumption, visualised. Jaime Serra Palou.](images/coffee-2.png)
+
+:::{.notes}
+:::
+
+## Selecting your tools 
+
+![]
+
+:::{.notes}
+:::
+
+## Staying in the tidyverse: `{ggplot2}`
+
+<!-- ----------------------------------------------------------------------- -->
+# 2: Think About Your Medium
+<!-- ----------------------------------------------------------------------- -->
+:::{.notes}
+:::
+
+## Where will your plot go?  
+
+
+:::{.notes}
+:::
+
+## File types
+
+:::{.notes}
+:::
+
+<!-- ----------------------------------------------------------------------- -->
+# 3: Think About Your Audience
+<!-- ----------------------------------------------------------------------- -->
+
+##  Who are your audience?
+
+## Preattentive Attributes
+
+## First impressions count 
+
+## Visual perception 
+
+## Alt text, titles and captions
+
+<!-- ----------------------------------------------------------------------- -->
+# 4: Think About Your Story
+<!-- ----------------------------------------------------------------------- -->
+
+## Data visualisation as storytelling 
+
+<!-- ----------------------------------------------------------------------- -->
+# 5: Think About Your Guidelines
+<!-- ----------------------------------------------------------------------- -->
+
+## Standardise and document it 
+
+
+## Wrapping Up 
+
+:::{.notes}
+Wrapping up then. 
+Thank you very much for your attention, and I'll see you in the next video.
+:::
+
+## Image Credits 
+
+* The Climate Book - [Penguin](https://www.penguin.co.uk/books/446610/the-climate-book-by-thunberg-greta/9780241547472) 
+
+* Coffee Cup -  [Jaime Serra Palou](https://www.domestika.org/pt/projects/417262-cafe-diario)
+
+* Pre-attentive attributes - Adapted from [Better Data Visualizations](http://cup.columbia.edu/book/better-data-visualizations/9780231193115)
+
+* Female Heights - [tumblr/badvisualisations via twitter](https://www.tumblr.com/badvisualisations/184828044636/1-as-a-rule-the-y-axis-of-a-bar-graph-needs-to) 
+
+* Desaturated colour scales - `{viridis}` [documentation](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html)
