@@ -24,7 +24,7 @@ format:
     incremental: false
 ---
 
-## Aquiring data via an API
+## Acquiring data via an API
 
 <br>
 
