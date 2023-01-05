@@ -257,7 +257,7 @@ Note: While it can be much faster, the resulting data.table object lacks the con
 :::
 ::::
 
-[Source: Wikiedia - Wide and narrow data]
+[Source: Wikipedia - Wide and narrow data]
 
 ## Wide vs Tall Data: Example 2 {.smaller}
 
