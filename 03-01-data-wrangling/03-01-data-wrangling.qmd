@@ -276,7 +276,7 @@ Subset using names (note different objects)
 
 ```{r, echo=TRUE, eval=FALSE}
 pengins[ , "species"]   # tibble
-penguins$species.       # vector 
+penguins$species       # vector 
 ```
 
 :::{.notes}
@@ -344,7 +344,7 @@ Subsetting rows can be inverted by negating the `filter()` statement and droppin
 # Creating new variables
 
 :::{.notes}
-The data that woy are probived with orignally are not always sufficinent, you will often need to transform or combine them. Again, there are different approaches you can take to creating new variables, depending on whether you use base R or dplyr functions.
+The data that you are probived with orignally are not always sufficinent, you will often need to transform or combine them. Again, there are different approaches you can take to creating new variables, depending on whether you use base R or dplyr functions.
 :::
 
 <!-- ----------------------------------------------------------------------- -->
