@@ -275,6 +275,7 @@ countdown::countdown(5)
 # Minimal R project in 1 hour (or less)
 
 
+<!-- 
 ## What is a package 
 
 
@@ -300,9 +301,9 @@ You will need:
 For the "hardcore" folks you can do all of this by hand, but it is an absolute pain. These tools were developed for a reason. 
 :::
 
-<!-- :::{.callout-warning}
+ :::{.callout-warning}
 For more advanced package development you may need to install Rtools. This allows you to do fun developer things like write functions that link R with other languages, including C++. This is not an R package, it is separate software.
-::: --> 
+::: 
 
 ## Create a template directory
 Once per package
@@ -343,6 +344,6 @@ https://www.pipinghotdata.com/posts/2020-10-25-your-first-r-package-in-1-hour/#a
 
 https://r-pkgs.org/ 
 
-
+-->
 
 
