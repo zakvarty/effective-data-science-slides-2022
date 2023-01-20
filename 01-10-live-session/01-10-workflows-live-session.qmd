@@ -34,6 +34,27 @@ format:
 
 4. Minimal R Package
 
+## Why are you here? 
+
+::::{.columns}
+:::{.column width="50%"}
+
+<br>
+
+(Or more specifically, what do you want to get out of this course?)
+
+<br>
+
+`https://www.menti.com/alauvs7ohjia` 
+
+:::
+:::{.column width="50%"}
+![](images/mentimeter_why-are-you-here.png)
+:::
+::::
+
+# Review 
+
 ## Life Cycle of A Data Science Project 
 
 ![source: R4DS](images/data-science-cycle-wickham.png)
@@ -46,7 +67,7 @@ format:
 
 ![](images/data-science-cycle-1)
 
-# Task Review 
+# Task Discussion 
 
 ## Review - Organising your work 
 
